@@ -13,7 +13,7 @@ class HeaderViewController: UIViewController {
     var lastMinHeaderHeight: CGFloat = .zero
     var covernitialHeight  : CGFloat!
     var stickyCover = true
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -22,16 +22,14 @@ class HeaderViewController: UIViewController {
         super.viewWillAppear(animated)
         self.update(with: lastProgress, minHeaderHeight: lastMinHeaderHeight)
     }
-    
+
     func update(with progress: CGFloat, minHeaderHeight: CGFloat){
         lastProgress = progress
         lastMinHeaderHeight = minHeaderHeight
         
         let y = progress * (view.frame.height - minHeaderHeight)
         
-        guard covernitialHeight != nil else {
-            return
-        }
+        guard covernitialHeight != nil else {return}
         
         let topLimit = covernitialHeight - minHeaderHeight
         if y > topLimit{
