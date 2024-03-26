@@ -174,13 +174,9 @@
 		9833EECF2BAE246700B094A6 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				98E2A7AC2BB24D5000958742 /* Progress */,
+				98E2A7AB2BB24D2E00958742 /* Page */,
 				98C13B7D2BB2463F007B8E31 /* TapPage */,
-				9833EED02BAE248A00B094A6 /* BottomPageDelegate.swift */,
-				9833EED22BAE24A500B094A6 /* PagerAwareProtocol.swift */,
-				9833EED42BAE24BA00B094A6 /* PannableViewsProtocol.swift */,
-				9833EED92BAE253100B094A6 /* ProgressDelegate.swift */,
-				9833EEDB2BAE254400B094A6 /* DataSource.swift */,
-				9833EEED2BAE30FF00B094A6 /* CommonPageProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -305,6 +301,26 @@
 				98C13B832BB246DB007B8E31 /* TabButton.swift */,
 			);
 			path = TabPage;
+			sourceTree = "<group>";
+		};
+		98E2A7AB2BB24D2E00958742 /* Page */ = {
+			isa = PBXGroup;
+			children = (
+				9833EEED2BAE30FF00B094A6 /* CommonPageProtocol.swift */,
+				9833EED22BAE24A500B094A6 /* PagerAwareProtocol.swift */,
+				9833EED02BAE248A00B094A6 /* BottomPageDelegate.swift */,
+				9833EED42BAE24BA00B094A6 /* PannableViewsProtocol.swift */,
+			);
+			path = Page;
+			sourceTree = "<group>";
+		};
+		98E2A7AC2BB24D5000958742 /* Progress */ = {
+			isa = PBXGroup;
+			children = (
+				9833EEDB2BAE254400B094A6 /* DataSource.swift */,
+				9833EED92BAE253100B094A6 /* ProgressDelegate.swift */,
+			);
+			path = Progress;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
