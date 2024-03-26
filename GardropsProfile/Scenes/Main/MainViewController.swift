@@ -11,14 +11,14 @@ class MainViewController: UIViewController {
     
     var headerVC: HeaderViewController!
     var bottomVC: BottomViewController!
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configure()
     }
     
     private func configure(){
-        DispatchQueue.main.async {
+        DispatchQueue.main.async {   
             self.tp_configure(with: self,delegate: self)
         }
     }
