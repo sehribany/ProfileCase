@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="RPe-e8-opF">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="NTx-le-U8f">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="RPe-e8-opF" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Hhw-k8-zOP">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="eAi-L5-822"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hYu-gB-QpY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.64122137404578" y="3.5211267605633805"/>
+        </scene>
+        <!--Kullanıcı Adı-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="ProfileViewController" id="BYZ-38-t0r" customClass="MainViewController" customModule="GardropsProfile" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Kullanıcı Adı" id="588-ws-9IN">
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="icBack" id="IQ7-Sp-VRo"/>
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="icPoints" id="m55-JI-dQb"/>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="IDq-rw-Nx4" kind="showDetail" id="qT4-nU-Y3e"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="819" y="4"/>
+        </scene>
+        <!--Header View Controller-->
+        <scene sceneID="hLU-i5-2aQ">
+            <objects>
+                <viewController storyboardIdentifier="HeaderViewController" id="IDq-rw-Nx4" customClass="HeaderViewController" customModule="GardropsProfile" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qhx-am-nlb" customClass="ProfileView" customModule="GardropsProfile" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="450"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="C4s-Dw-0xw"/>
+                        <color key="backgroundColor" name="appWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="xdg-3j-qCY"/>
+                    <size key="freeformSize" width="393" height="450"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ajc-5h-gM4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1602" y="-284"/>
+        </scene>
+        <!--Gardrops View Controller-->
+        <scene sceneID="VP3-kK-UYH">
+            <objects>
+                <viewController storyboardIdentifier="GardropsViewController" id="S8t-7D-q7i" customClass="GardropsViewController" customModule="GardropsProfile" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MxK-1i-RSh">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="tAy-h2-949">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <color key="backgroundColor" name="appWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="8Xh-V6-T0L">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ProductCell" id="Vag-Pt-WjL" customClass="ProductCell" customModule="GardropsProfile" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="127.99999999999997" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="nFP-sO-Bip">
+                                            <rect key="frame" x="0.0" y="0.0" width="127.99999999999997" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                        <connections>
+                                            <outlet property="viewContainer" destination="nFP-sO-Bip" id="geV-98-wgV"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="S8t-7D-q7i" id="Mwx-eJ-fQL"/>
+                                    <outlet property="delegate" destination="S8t-7D-q7i" id="40V-e7-WE9"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="gDZ-cT-4el"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="tAy-h2-949" firstAttribute="top" secondItem="gDZ-cT-4el" secondAttribute="top" id="5EZ-PA-lnb"/>
+                            <constraint firstItem="gDZ-cT-4el" firstAttribute="bottom" secondItem="tAy-h2-949" secondAttribute="bottom" id="CvK-F5-nfe"/>
+                            <constraint firstItem="gDZ-cT-4el" firstAttribute="trailing" secondItem="tAy-h2-949" secondAttribute="trailing" id="bsO-8v-dhq"/>
+                            <constraint firstItem="tAy-h2-949" firstAttribute="leading" secondItem="gDZ-cT-4el" secondAttribute="leading" id="t18-PO-SVj"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="tAy-h2-949" id="j8z-sy-n8p"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5Z4-QP-KY8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2331" y="-112"/>
+        </scene>
+        <!--Bottom View Controller-->
+        <scene sceneID="qcG-p0-RNj">
+            <objects>
+                <viewController storyboardIdentifier="BottomViewController" id="3w9-dW-3g3" customClass="BottomViewController" customModule="GardropsProfile" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nMW-Ro-ghT">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m4q-K2-GGF" customClass="CommonPageView" customModule="GardropsProfile" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="MnL-Cf-4ke"/>
+                        <color key="backgroundColor" name="appWhite"/>
+                        <constraints>
+                            <constraint firstItem="m4q-K2-GGF" firstAttribute="top" secondItem="MnL-Cf-4ke" secondAttribute="top" id="6V4-Kb-N1w"/>
+                            <constraint firstItem="m4q-K2-GGF" firstAttribute="bottom" secondItem="MnL-Cf-4ke" secondAttribute="bottom" id="7pi-li-DUI"/>
+                            <constraint firstItem="m4q-K2-GGF" firstAttribute="leading" secondItem="MnL-Cf-4ke" secondAttribute="leading" id="gtT-yk-VBK"/>
+                            <constraint firstItem="m4q-K2-GGF" firstAttribute="trailing" secondItem="MnL-Cf-4ke" secondAttribute="trailing" id="tK5-nT-aIS"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="vwPageView" destination="m4q-K2-GGF" id="kZd-Eh-EYo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1w2-kJ-LWo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1602" y="239"/>
+        </scene>
+        <!--Favorite View Controller-->
+        <scene sceneID="KMl-00-u8O">
+            <objects>
+                <viewController storyboardIdentifier="FavoriteViewController" id="KsA-yM-4Yh" customClass="FavoriteViewController" customModule="GardropsProfile" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="iEO-Db-mLV">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="XUp-Oa-0rc">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <color key="backgroundColor" name="appWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="bpE-5c-iSv">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ProductCell" id="gsG-Nh-YmS" customClass="ProductCell" customModule="GardropsProfile" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="127.99999999999997" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="X9n-cQ-xgY">
+                                            <rect key="frame" x="0.0" y="0.0" width="127.99999999999997" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                        <connections>
+                                            <outlet property="viewContainer" destination="X9n-cQ-xgY" id="EPQ-ZA-Rlt"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="KsA-yM-4Yh" id="byy-p9-Sha"/>
+                                    <outlet property="delegate" destination="KsA-yM-4Yh" id="ncy-hr-Pm8"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="E5q-85-j9K"/>
+                        <color key="backgroundColor" name="appWhite"/>
+                        <constraints>
+                            <constraint firstItem="E5q-85-j9K" firstAttribute="bottom" secondItem="XUp-Oa-0rc" secondAttribute="bottom" id="Bax-Pe-3Yu"/>
+                            <constraint firstItem="XUp-Oa-0rc" firstAttribute="top" secondItem="E5q-85-j9K" secondAttribute="top" id="PKO-cj-2lL"/>
+                            <constraint firstItem="E5q-85-j9K" firstAttribute="trailing" secondItem="XUp-Oa-0rc" secondAttribute="trailing" id="ctw-DJ-iwF"/>
+                            <constraint firstItem="XUp-Oa-0rc" firstAttribute="leading" secondItem="E5q-85-j9K" secondAttribute="leading" id="v7M-KG-sai"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="XUp-Oa-0rc" id="Tvx-aX-nBM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uWX-cJ-ZES" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2331" y="563"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="icBack" width="11" height="16"/>
+        <image name="icPoints" width="16" height="4"/>
+        <namedColor name="appWhite">
+            <color red="0.99607843137254903" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
