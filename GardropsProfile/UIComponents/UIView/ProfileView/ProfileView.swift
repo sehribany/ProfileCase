@@ -8,7 +8,7 @@
 import UIKit
 
 class ProfileView: UIView {
-    
+
     private let profileImage: UIImageView = {
         let image = UIImageView()
         image.contentMode = .scaleAspectFit
@@ -97,7 +97,6 @@ class ProfileView: UIView {
         label.textAlignment = .center
         label.numberOfLines = 1
         label.font = .systemFont(ofSize: 12,weight: .regular)
-        label.text = "Telefonla doğrulandı"
         return label
     }()
     
@@ -115,7 +114,6 @@ class ProfileView: UIView {
         label.textAlignment = .center
         label.numberOfLines = 1
         label.font = .systemFont(ofSize: 12,weight: .regular)
-        label.text = "2 yıl önce üye oldu"
         return label
     }()
     
@@ -126,7 +124,6 @@ class ProfileView: UIView {
         label.numberOfLines = 0
         label.font = .systemFont(ofSize: 13,weight: .regular)
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = "Kendim hakkında bir bio yazacak olsam ne yazardım diye düşündüm.😃"
         return label
     }()
     
@@ -135,7 +132,6 @@ class ProfileView: UIView {
         button.layer.cornerRadius = 8
         button.layer.borderWidth = 0.5
         button.layer.borderColor = UIColor.appLineGray.cgColor
-        button.setTitle("Takip Et", for: .normal)
         button.titleLabel?.font = .systemFont(ofSize: 14,weight: .regular)
         button.tintColor = .appGray
         return button
@@ -144,7 +140,6 @@ class ProfileView: UIView {
     private let sendMessageButton: UIButton = {
         let button = UIButton(type: .system)
         button.layer.cornerRadius = 8
-        button.setTitle("Mesaj Gönder", for: .normal)
         button.titleLabel?.font = .systemFont(ofSize: 14,weight: .regular)
         button.tintColor = .appWhite
         let gradientLayer = CAGradientLayer()
@@ -156,15 +151,18 @@ class ProfileView: UIView {
         return button
     }()
         
+    var viewModel = ProfileModel()
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         addSubViews()
+        fetchData()
     }
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         addSubViews()
-
+        fetchData()
     }
 }
 
@@ -186,7 +184,6 @@ extension ProfileView{
     
     private func addImageView(){
         addSubview(profileImage)
-        profileImage.image = UIImage(named: "a")
         profileImage.width(86)
         profileImage.height(86)
         profileImage.layer.cornerRadius = 43
@@ -267,6 +264,30 @@ extension ProfileView{
         sendMessageButton.leadingToSuperview().constant = 200
         sendMessageButton.trailingToSuperview().constant = -16
         sendMessageButton.topToBottom(of: bioLabel).constant = 20
-        sendMessageButton.bottomToSuperview().constant = -10
+        sendMessageButton.bottomToSuperview()
+    }
+}
+
+//MARK: -Network
+extension ProfileView{
+    func fetchData(){
+        viewModel.getuserDetail { result  in
+            switch result{
+            case.success(let profile):
+                DispatchQueue.main.async{
+                    self.profileImage.setImage(profile.data.avatar)
+                    self.bioLabel.text = profile.data.bio
+                    self.dateLabel.text = profile.data.registeredAt
+                    self.sendMessageButton.setTitle(profile.data.secondaryButtonTitle, for: .normal)
+                    self.followButton.setTitle(profile.data.primaryButtonTitle, for: .normal)
+                    if profile.data.isVerifiedByPhone == false{
+                        self.verificationLabel.text = "Telefonla Doğrulanmadı."
+                    }else{
+                        self.verificationLabel.text = "Telefonla Doğrulandı."
+                    }
+                }
+            case .failure(let error): print("Hata: \(error)")
+            }
+        }
     }
 }
