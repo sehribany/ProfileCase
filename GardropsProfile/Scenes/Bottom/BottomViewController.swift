@@ -18,7 +18,6 @@ class BottomViewController: UIViewController{
         }
     }
     
-    var currentPageIndex = 0
     var pageDelegate: BottomPageDelegate?
     
     override func viewDidLoad() {
