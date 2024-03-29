@@ -42,9 +42,6 @@
                         <barButtonItem key="leftBarButtonItem" title="Item" image="icBack" id="IQ7-Sp-VRo"/>
                         <barButtonItem key="rightBarButtonItem" title="Item" image="icPoints" id="m55-JI-dQb"/>
                     </navigationItem>
-                    <connections>
-                        <segue destination="IDq-rw-Nx4" kind="showDetail" id="qT4-nU-Y3e"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

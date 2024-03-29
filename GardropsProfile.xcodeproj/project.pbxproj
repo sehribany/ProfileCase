@@ -140,8 +140,8 @@
 		9833EEAC2BAE1DE800B094A6 /* GardropsProfile */ = {
 			isa = PBXGroup;
 			children = (
-				98A3A0622BB2E919009F21A7 /* Constants */,
 				9833EEC12BAE1E4C00B094A6 /* AppDelegates */,
+				98A3A0622BB2E919009F21A7 /* Constants */,
 				9833EED62BAE24F500B094A6 /* Extensions */,
 				9833EECF2BAE246700B094A6 /* Protocols */,
 				9833EEC22BAE1EBA00B094A6 /* Scenes */,
