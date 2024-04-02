@@ -1,4 +1,4 @@
-# Gardrops Profile Case
+# Profile Case
 
 ## Concepts & Technologies Used
 - Swift
