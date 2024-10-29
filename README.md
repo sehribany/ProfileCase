@@ -1,5 +1,7 @@
 # Profile Case
 
+This project is the project of the Gardrops.
+
 ## Concepts & Technologies Used
 - Swift
 - MVVM
